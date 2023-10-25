@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> UL / LI </title>
+</head>
+<body>
+
+    <div id="container">
+
+    </div>
+
+
+
+
+    <script>
+// let sub_ul = 1
+
+let ul = `<ul>`
+    for( let i = 1; i<=3; i++) {
+        let sub_ul = ``
+
+        if ( i == 1 ) {
+            sub_ul = `<ul>`
+
+                for( let j = 1; j<=2; j++ ) {
+                    sub_ul += ` <li>subitem ${j}</li> `
+                }
+                sub_ul += `</ul>` 
+        }
+        //-------------------2-----------------------
+
+        if ( i == 2) {
+            sub_ul = `<ul>`
+        for ( let s = 3; s <= 5; s++ ) {
+            
+            sub_ul += ` <li>subitem${s}</li> `
+        }
+        sub_ul += `</ul>`
+    }
+        //HW:1 second Item -> 3 subitems (3.4.5)
+        //third item -> 2 subitems (6.7)
+
+
+//------------------------3----------------------------
+
+if ( i == 3) {
+            sub_ul = `<ul>`
+        for ( let t = 5; t <= 6; t++ ) {
+            
+            sub_ul += ` <li>subitem${t}</li> `
+        }
+        sub_ul += `</ul>`
+    }
+
+        ul += ` <li>Item${i}${sub_ul}</li> `
+
+
+    }
+
+    ul += `</ul>`
+
+    container.innerHTML = ul
+
+    </script>
+    
+</body>
+</html>
